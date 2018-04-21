@@ -27,7 +27,7 @@ function separate(str) {
 }
 
 function solve(str) {
-  calculate(separate(str))
+  return calculate(separate(str))[0]
 }
 
 function calculate(lexemes) {
