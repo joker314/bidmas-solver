@@ -27,7 +27,7 @@ function separate(str) {
 }
 
 function solve(str) {
-  return calculate(separate(str))[0].value
+  return calculate(separate(str))
 }
 
 function calculate(lexemes) {
@@ -47,5 +47,5 @@ function calculate(lexemes) {
           lexemes.splice(indx - 1, 3, {type: "number", value: ops[lexemes[indx].value](+lexemes[indx - 1].value, +lexemes[indx + 1].value)})
       }
   }
-  return lexemes
+  return lexemes[0].value
 }
